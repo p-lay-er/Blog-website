@@ -21,7 +21,8 @@ const Post = mongoose.model("Post", postSchela);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-mongoose.connect("mongodb+srv://admin-lay:test123@cluster0.a9jpt.mongodb.net/blogDB?retryWrites=true&w=majority");
+// mongoose.connect("mongodb://localhost:27017/main");
+mongoose.connect("mongodb+srv://lay_000:lay12345@todo.hhtwc.mongodb.net/BlogDB?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 app.get("/", function (req, res) {
   Post.find({}, function (err, foundPosts) {
