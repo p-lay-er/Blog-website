@@ -78,7 +78,6 @@ app.post("/compose", function (req, res) {
     if (!err)
       res.redirect("/home");
   });
-
 });
 
 app.get("/posts/:postName", function (req, res) {
